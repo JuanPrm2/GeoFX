@@ -10,14 +10,14 @@ import javafx.stage.Stage;
 public class App extends Application{
 
 	RootController controller;
-	IpapiService servicio;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
 		controller= new RootController();
-		servicio= new IpapiService();
+		
 
-		System.out.println(servicio.getDatosIP("8.8.8.8").getCity());
+		
 		
 		
 		
