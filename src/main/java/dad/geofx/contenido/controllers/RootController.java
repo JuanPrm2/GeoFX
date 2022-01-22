@@ -74,17 +74,17 @@ public class RootController implements Initializable{
 		  System.out.println(ip.getValue());
 		  IpapiData ipapiData=   servicio.getDatosIP(ip.getValue());
 		  System.out.println(ipapiData.getCountryName());
-//		  controllerLocation.getLocationModel().setCallingCode(ipapiData.getLocation().getCallingCode());
-//		  controllerLocation.getLocationModel().setCityData(String.format("%s (%s)", ipapiData.getCity(),ipapiData.getRegionName()));
-//		  controllerLocation.getLocationModel().setCountryData(String.format("%s (%s)",ipapiData.getCountryName(),ipapiData.getCountryCode()));
-//		  controllerLocation.getLocationModel().setCurrency(String.format("%s (%s)", ipapiData.getCurrency().getName(),ipapiData.getCurrency().getSymbol()));
-//		  controllerLocation.getLocationModel().setImagen(new Image ("/64x42/"+ipapiData.getCountryCode()+".png"));
-//		  controllerLocation.getLocationModel().setLanguage(language(ipapiData.getLocation().getLanguages()));
-//		  controllerLocation.getLocationModel().setLatitude(ipapiData.getLatitude());
-//		  controllerLocation.getLocationModel().setLongitude(ipapiData.getLongitude());
-//		  controllerLocation.getLocationModel().setTimeZone(ipapiData.getTimeZone().getCode());
-//		  controllerLocation.getLocationModel().setZipCode(ipapiData.getZip());
-//		  
+		  controllerLocation.getLocationModel().setCallingCode(ipapiData.getLocation().getCallingCode());
+		  controllerLocation.getLocationModel().setCityData(String.format("%s (%s)", ipapiData.getCity(),ipapiData.getRegionName()));
+		  controllerLocation.getLocationModel().setCountryData(String.format("%s (%s)",ipapiData.getCountryName(),ipapiData.getCountryCode()));
+		  controllerLocation.getLocationModel().setCurrency(String.format("%s (%s)", ipapiData.getCurrency().getName(),ipapiData.getCurrency().getSymbol()));
+		  controllerLocation.getLocationModel().setImagen(new Image ("/64x42/"+ipapiData.getCountryCode()+".png"));
+		  controllerLocation.getLocationModel().setLanguage(language(ipapiData.getLocation().getLanguages()));
+		  controllerLocation.getLocationModel().setLatitude(ipapiData.getLatitude());
+		  controllerLocation.getLocationModel().setLongitude(ipapiData.getLongitude());
+		  controllerLocation.getLocationModel().setTimeZone(ipapiData.getTimeZone().getCode());
+		  controllerLocation.getLocationModel().setZipCode(ipapiData.getZip());
+		  
 		  
 	    }
 

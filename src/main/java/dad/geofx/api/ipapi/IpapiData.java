@@ -1,32 +1,72 @@
 
 package dad.geofx.api.ipapi;
 
-import java.util.HashMap;
-import java.util.Map;
 
 
+import javax.annotation.processing.Generated;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+
+@Generated("jsonschema2pojo")
 public class IpapiData {
 
+
+    @SerializedName("ip")
+    @Expose
     private String ip;
+    @SerializedName("hostname")
+    @Expose
     private String hostname;
+    @SerializedName("type")
+    @Expose
     private String type;
+    @SerializedName("continent_code")
+    @Expose
     private String continentCode;
+    @SerializedName("continent_name")
+    @Expose
     private String continentName;
+    @SerializedName("country_code")
+    @Expose
     private String countryCode;
+    @SerializedName("country_name")
+    @Expose
     private String countryName;
+    @SerializedName("region_code")
+    @Expose
     private String regionCode;
+    @SerializedName("region_name")
+    @Expose
     private String regionName;
+    @SerializedName("city")
+    @Expose
     private String city;
+    @SerializedName("zip")
+    @Expose
     private String zip;
+    @SerializedName("latitude")
+    @Expose
     private Double latitude;
+    @SerializedName("longitude")
+    @Expose
     private Double longitude;
+    @SerializedName("location")
+    @Expose
     private Location location;
+    @SerializedName("time_zone")
+    @Expose
     private TimeZone timeZone;
+    @SerializedName("currency")
+    @Expose
     private Currency currency;
+    @SerializedName("connection")
+    @Expose
     private Connection connection;
+    @SerializedName("security")
+    @Expose
     private Security security;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public String getIp() {
         return ip;
@@ -170,14 +210,6 @@ public class IpapiData {
 
     public void setSecurity(Security security) {
         this.security = security;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dad.geofx.contenido.model.SecurityModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,25 +14,25 @@ import javafx.scene.layout.GridPane;
 
 public class SecurityController implements Initializable{
 
-	
+	 private SecurityModel securityModel = new SecurityModel();
 	
 	@FXML
-    private CheckBox CrawlerChechBox;
+    private CheckBox crawlerChechBox;
 
     @FXML
-    private Label PotentialCheckBox;
+    private Label potentialCheckBox;
 
     @FXML
-    private CheckBox ProxyCheckBox;
+    private CheckBox proxyCheckBox;
 
     @FXML
-    private GridPane SecurityGridPane;
+    private GridPane securityGridPane;
 
     @FXML
-    private Label ThreatCheckBox;
+    private Label threatCheckBox;
 
     @FXML
-    private CheckBox TorCheckBox;
+    private CheckBox torCheckBox;
 
     @FXML
     private Label statusLabel;
@@ -41,6 +42,20 @@ public class SecurityController implements Initializable{
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/SecurityView.fxml"));
 		loader.setController(this);
 		loader.load();
+		
+		crawlerChechBox.selectedProperty().bind(securityModel.crawlerProperty());
+		
+		potentialCheckBox.textProperty().bind(securityModel.potentialThreatProperty());
+		
+		proxyCheckBox.selectedProperty().bind(securityModel.proxyProperty());
+		
+		threatCheckBox.textProperty().bind(securityModel.threatLvlProperty());
+		
+		torCheckBox.selectedProperty().bind(securityModel.torProperty());
+		
+		statusLabel.textProperty().bind(securityModel.statusProperty());
+		
+		
     }
     
 	
@@ -53,7 +68,7 @@ public class SecurityController implements Initializable{
 	
 	
 	public GridPane getSecurityGridPane() {
-		return SecurityGridPane;
+		return securityGridPane;
 	}
 	
 	

@@ -1,22 +1,41 @@
 
 package dad.geofx.api.ipapi;
 
-import java.util.HashMap;
-import java.util.Map;
 
 
+import javax.annotation.processing.Generated;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+
+@Generated("jsonschema2pojo")
 public class Security {
 
+    @SerializedName("is_proxy")
+    @Expose
     private Boolean isProxy;
+    @SerializedName("proxy_type")
+    @Expose
     private Object proxyType;
+    @SerializedName("is_crawler")
+    @Expose
     private Boolean isCrawler;
+    @SerializedName("crawler_name")
+    @Expose
     private Object crawlerName;
+    @SerializedName("crawler_type")
+    @Expose
     private Object crawlerType;
+    @SerializedName("is_tor")
+    @Expose
     private Boolean isTor;
+    @SerializedName("threat_level")
+    @Expose
     private String threatLevel;
+    @SerializedName("threat_types")
+    @Expose
     private Object threatTypes;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Boolean getIsProxy() {
         return isProxy;
@@ -82,12 +101,5 @@ public class Security {
         this.threatTypes = threatTypes;
     }
 
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 }
