@@ -17,19 +17,19 @@ public class ConnectionController implements Initializable{
 	private ConnectionModel connectionModel = new ConnectionModel();
 	
     @FXML
-    private Label aSNLabel;
+    private Label ASNLabel;
 
     @FXML
-    private GridPane connectionGridPane;
+    private GridPane ConnectionGridPane;
 
     @FXML
-    private Label hostNameLabel;
+    private Label HostNameLabel;
 
     @FXML
-    private Label iPLabel;
+    private Label IPLabel;
 
     @FXML
-    private Label typeLabel;
+    private Label TypeLabel;
 	
 	public ConnectionController() throws IOException {
 		
@@ -37,13 +37,13 @@ public class ConnectionController implements Initializable{
 		loader.setController(this);
 		loader.load();
 		
-		aSNLabel.textProperty().bindBidirectional(connectionModel.asnProperty(), new NumberStringConverter());
+		ASNLabel.textProperty().bindBidirectional(connectionModel.asnProperty(), new NumberStringConverter());
 		
-		hostNameLabel.textProperty().bind(connectionModel.hostNameProperty());
+		HostNameLabel.textProperty().bind(connectionModel.hostNameProperty());
+	
+		IPLabel.textProperty().bind(connectionModel.ipAddressProperty());
 		
-		iPLabel.textProperty().bind(connectionModel.ipAddressProperty());
-		
-		typeLabel.textProperty().bind(connectionModel.tipoIpProperty());
+		TypeLabel.textProperty().bind(connectionModel.tipoIpProperty());
 		
 		
 	}
@@ -55,7 +55,51 @@ public class ConnectionController implements Initializable{
 	}
 
 	public GridPane getConnectionGridPane() {
-		return connectionGridPane;
+		return ConnectionGridPane;
+	}
+
+	public ConnectionModel getConnectionModel() {
+		return connectionModel;
+	}
+
+	public void setConnectionModel(ConnectionModel connectionModel) {
+		this.connectionModel = connectionModel;
+	}
+
+	public Label getASNLabel() {
+		return ASNLabel;
+	}
+
+	public void setASNLabel(Label aSNLabel) {
+		ASNLabel = aSNLabel;
+	}
+
+	public Label getHostNameLabel() {
+		return HostNameLabel;
+	}
+
+	public void setHostNameLabel(Label hostNameLabel) {
+		HostNameLabel = hostNameLabel;
+	}
+
+	public Label getIPLabel() {
+		return IPLabel;
+	}
+
+	public void setIPLabel(Label iPLabel) {
+		IPLabel = iPLabel;
+	}
+
+	public Label getTypeLabel() {
+		return TypeLabel;
+	}
+
+	public void setTypeLabel(Label typeLabel) {
+		TypeLabel = typeLabel;
+	}
+
+	public void setConnectionGridPane(GridPane connectionGridPane) {
+		ConnectionGridPane = connectionGridPane;
 	}
 	
 	

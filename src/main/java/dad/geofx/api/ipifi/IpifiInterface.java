@@ -5,11 +5,12 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 import dad.geofx.api.ipifi.IpifiData;
 
-public class IpifiInterface {
+public interface IpifiInterface {
 
-	@GET("/")
+	@GET("https://api.ipify.org")
 	public Call<IpifiData> ipifiData(@Query("format") String format);
-	
+		
+		
 	
 	
 

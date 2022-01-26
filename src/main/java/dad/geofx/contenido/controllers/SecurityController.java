@@ -17,22 +17,22 @@ public class SecurityController implements Initializable{
 	 private SecurityModel securityModel = new SecurityModel();
 	
 	@FXML
-    private CheckBox crawlerChechBox;
+    private CheckBox CrawlerChechBox;
 
     @FXML
-    private Label potentialCheckBox;
+    private Label PotentialCheckBox;
 
     @FXML
-    private CheckBox proxyCheckBox;
+    private CheckBox ProxyCheckBox;
 
     @FXML
-    private GridPane securityGridPane;
+    private GridPane SecurityGridPane;
 
     @FXML
-    private Label threatCheckBox;
+    private Label ThreatCheckBox;
 
     @FXML
-    private CheckBox torCheckBox;
+    private CheckBox TorCheckBox;
 
     @FXML
     private Label statusLabel;
@@ -43,15 +43,15 @@ public class SecurityController implements Initializable{
 		loader.setController(this);
 		loader.load();
 		
-		crawlerChechBox.selectedProperty().bind(securityModel.crawlerProperty());
+		CrawlerChechBox.selectedProperty().bind(securityModel.crawlerProperty());
 		
-		potentialCheckBox.textProperty().bind(securityModel.potentialThreatProperty());
+		PotentialCheckBox.textProperty().bind(securityModel.potentialThreatProperty());
 		
-		proxyCheckBox.selectedProperty().bind(securityModel.proxyProperty());
+		ProxyCheckBox.selectedProperty().bind(securityModel.proxyProperty());
 		
-		threatCheckBox.textProperty().bind(securityModel.threatLvlProperty());
+		ThreatCheckBox.textProperty().bind(securityModel.threatLvlProperty());
 		
-		torCheckBox.selectedProperty().bind(securityModel.torProperty());
+		TorCheckBox.selectedProperty().bind(securityModel.torProperty());
 		
 		statusLabel.textProperty().bind(securityModel.statusProperty());
 		
@@ -68,7 +68,12 @@ public class SecurityController implements Initializable{
 	
 	
 	public GridPane getSecurityGridPane() {
-		return securityGridPane;
+		return SecurityGridPane;
+	}
+
+
+	public SecurityModel getSecurityModel() {
+		return securityModel;
 	}
 	
 	
