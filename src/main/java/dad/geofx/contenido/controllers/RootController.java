@@ -87,12 +87,19 @@ public class RootController implements Initializable{
 		  controllerSecurity.getSecurityModel().setTor(ipapiData.getSecurity().getIsTor());
 		  controllerSecurity.getSecurityModel().setCrawler(ipapiData.getSecurity().getIsCrawler());
 		  controllerSecurity.getSecurityModel().setThreatLvl(ipapiData.getSecurity().getThreatLevel());
+//		  controllerSecurity.getSecurityModel().setPotentialThreat(ipapiData.get);
+//		  controllerSecurity.getSecurityModel().setStatus(ipapiData.get);
+		  
 		  
 		  controllerConnection.getConnectionModel().setIpAddress(ipapiData.getIp());
-//		  controllerConnection.getConnectionModel().setEntidad(ipapiData.get);
+		  controllerConnection.getConnectionModel().setEntidad(ipapiData.getConnection().getIsp());
 		  controllerConnection.getConnectionModel().setTipoIp(ipapiData.getType());
-//		  controllerConnection.getConnectionModel().setAsn(ipapiData.get);
+		  controllerConnection.getConnectionModel().setAsn(ipapiData.getConnection().getAsn());
 		  controllerConnection.getConnectionModel().setHostName(ipapiData.getHostname());
+		  
+		 
+		 
+		  
 	}
 
 
